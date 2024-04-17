@@ -1,8 +1,14 @@
 <?php
 //echo "Test script php";
 
-//save in the variable discs all the array of dischi.json 
-$discs = file_get_contents('dischi.json');
+// read the json file
+$json_string = file_get_contents('dischi.json');
+// turn it into an assoc array
+$albums = json_decode($json_string, true);
 
-//check the content of the discs variable
-var_dump($discs);
+//check the content of the discs
+//var_dump($albums);
+
+//print the json to out endpoint
+header("Content-Type: application/json");
+echo json_encode($albums);
