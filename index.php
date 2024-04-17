@@ -1,5 +1,5 @@
 <?php
-echo "Test php";
+include_once __DIR__ . '/assets/helpers/script.php'
 ?>
 
 <!doctype html>
