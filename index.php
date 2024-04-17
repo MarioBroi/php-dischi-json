@@ -6,7 +6,7 @@
     <meta name='viewport' content='width=device-width, initial-scale=1'>
 
     <!-- CSS -->
-    <link href='./assets/css/style.css' rel='stylesheet'>
+    <link rel="stylesheet" href="./assets/css/style.css">
 
     <title>Albums dispense</title>
 </head>
@@ -15,16 +15,28 @@
 
     <div id="app">
 
-        <main>
-            <div class="dischi">
-
-                <div class="card" v-for="album in albums">
-                    <img :src="album.poster" alt="">
-                    <div>{{album.title}}</div>
-                </div>
-
+        <header class="app-header">
+            <div class="logo">
+                Albums dispense
             </div>
+            <!-- /.logo -->
+        </header>
+        <!-- /.app-header -->
+
+        <main class="app-main">
+
+            <div class="container">
+                    <div class="dischi">
+                        <div class="card" v-for="album in albums">
+                            <img :src="album.poster" alt="" class="album-poster">
+                            <div>{{album.title}}</div>
+                        </div>
+                </div>
+            </div>
+            <!-- /.container -->
         </main>
+        <!-- /.app-main -->
+
     </div>
     <!-- /.app -->
 
